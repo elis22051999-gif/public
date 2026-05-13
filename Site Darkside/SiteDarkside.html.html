@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ed & Lorraine Warren | DarkSide Books Collection</title>
+    <style>
+        :root {
+            --dark-bg: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --accent: #8b0000; 
+            --text-color: #e0e0e0;
+            --gold: #c5a059;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', serif;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('WhatsApp Image 2026-05-12 at 15.20.28.jpeg');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: var(--gold);
+            text-shadow: 3px 3px 15px rgba(0,0,0,1);
+        }
+
+        header p {
+            font-style: italic;
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin-top: 15px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: var(--gold);
+            border-bottom: 1px solid var(--accent);
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 10px;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .book-card {
+            background: var(--card-bg);
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .book-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+        }
+
+        .book-img {
+            width: 100%;
+            height: 380px;
+            background-color: #333;
+            margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+        }
+
+        .book-card h3 {
+            margin-bottom: 10px;
+            color: var(--text-color);
+            font-size: 1.1rem;
+        }
+
+        .price {
+            color: var(--gold);
+            font-size: 1.5rem;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .btn-buy {
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+            letter-spacing: 1px;
+        }
+
+        .btn-buy:hover {
+            background-color: #b30000;
+        }
+
+        .box-highlight {
+            background: linear-gradient(45deg, #1a1a1a, #050505);
+            border: 2px solid var(--gold);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 30px;
+            margin-top: 40px;
+            gap: 30px;
+        }
+
+        .box-img-featured {
+            flex: 1;
+            min-width: 300px;
+            height: 400px; 
+            background-image: url('WhatsApp Image 2026-05-12 at 14.12.41 (3).jpeg');
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .box-info {
+            flex: 1.2;
+            min-width: 300px;
+            padding: 10px;
+        }
+
+        .box-info h2 {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            background: var(--accent);
+            padding: 5px 12px;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            margin-left: 10px;
+            border-radius: 3px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            background: #000;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid #222;
+        }
+
+        footer strong {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.2rem; }
+            .box-highlight { text-align: center; }
+            .box-img-featured { height: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ed & Lorraine Warren</h1>
+        <p>"Nos arquivos do sobrenatural, eles são a última linha de defesa entre o nosso mundo e as trevas."</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Arquivos Obscuros</h2>
+        
+        <div class="books-grid">
+            <!-- Livro 1 -->
+            <div class="book-card">
+                <div class="book-img" style="background-image: url('WhatsApp Image 2026-05-12 at 14.12.41 (2).jpeg');"></div>
+                <h3>Ed & Lorraine Warren: Demonologistas</h3>
+                <p>O dossiê clássico que revela os bastidores dos casos mais assustadores do casal.</p>
+                <p class="price">R$ 94,90</p>
+                <a href="https://www.darksidebooks.com.br/ed-lorraine-warren-demonologistas/p" target="_blank" class="btn-buy">Ver na DarkSide</a>
+            </div>
+
+            <!-- Livro 2 -->
+            <div class="book-card">
+                <div class="book-img" style="background-image: url('WhatsApp Image 2026-05-12 at 14.12.40 (1).jpeg');"></div>
+                <h3>Lugar Sombrio</h3>
+                <p>A crônica detalhada de um dos casos de assombração mais documentados da história.</p>
+                <p class="price">R$ 94,90</p>
+                <a href="https://www.darksidebooks.com.br/ed-lorraine-warren-lugar-sombrio/p" target="_blank" class="btn-buy">Ver na DarkSide</a>
+            </div>
+
+            <!-- Livro 3 -->
+            <div class="book-card">
+                <div class="book-img" style="background-image: url('WhatsApp Image 2026-05-12 at 14.12.41 (1).jpeg');"></div>
+                <h3>Vidas Eternas</h3>
+                <p>Onde o mal não respeita fronteiras. Um mergulho profundo na possessão demoníaca.</p>
+                <p class="price">R$ 94,90</p>
+                <a href="https://www.darksidebooks.com.br/ed--lorraine-warren--vidas-eternas---drk-x/p" target="_blank" class="btn-buy">Ver na DarkSide</a>
+            </div>
+
+            <!-- Novo Livro: Luz nas Trevas -->
+            <div class="book-card">
+                <div class="book-img" style="background-image: url('WhatsApp Image 2026-05-12 at 18.57.00.jpeg');"></div>
+                <h3>Ed & Lorraine Warren: Luz nas Trevas</h3>
+                <p>O novo dossiê essencial para compreender os mistérios enfrentados pelos investigadores.</p>
+                <p class="price">R$ 94,90</p>
+                <!-- Link de redirecionamento atualizado -->
+                <a href="https://www.darksidebooks.com.br/ed--lorraine-warren-luz-nas-trevas--brinde-exclusivo/p" target="_blank" class="btn-buy">Ver na DarkSide</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">O Acervo Completo</h2>
+        
+        <div class="box-highlight">
+            <div class="box-img-featured"></div>
+            <div class="box-info">
+                <h2>Box Ed & Lorraine Warren <span class="badge">Edição Deluxe</span></h2>
+                <!-- Descrição atualizada para 4 livros -->
+                <p>A coleção definitiva para os verdadeiros investigadores do oculto. Inclui os quatro volumes com capa dura, acabamento premium e mimos exclusivos da DarkSide Books.</p>
+                <p class="price">R$ 359,90</p>
+                <a href="https://www.darksidebooks.com.br/ed--lorraine-warren--ritual-final-limited-edition--brindes-exclusivos/p" target="_blank" class="btn-buy" style="display: block; text-align: center;">Comprar a Coleção Completa</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Inspirado na linha DarkSide® Books | "Caveira, me leve com você."</p>
+        <p>&copy; 2026 Dossiê Warren Fansite. Projeto conceitual desenvolvido por <strong>Elizama Oliveira Da Silva</strong>.</p>
+    </footer>
+
+</body>
+</html>
